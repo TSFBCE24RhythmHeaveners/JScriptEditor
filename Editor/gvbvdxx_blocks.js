@@ -85,7 +85,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "sounduntildone",
+      "name": "sound",
       "check": "String"
     }
   ],
@@ -944,9 +944,9 @@ Blockly.JavaScript['geturl'] = function(block) {
 };
 
 Blockly.JavaScript['scratch_play_sound_until_done'] = function(block) {
-  var value_sounduntildone = Blockly.JavaScript.valueToCode(block, 'sounduntildone', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_sound = Blockly.JavaScript.valueToCode(block, 'sound', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = 'let audio = new Audio(' + value_sounduntildone + '); audio.play(); setTimeout(1000); console.debug('Sorry, I cannot.')\n';
+  var code = 'let audio = new Audio(' + value_sound + '); audio.play();\n';
   return code;
 };
 Blockly.JavaScript['or'] = function(block) {
