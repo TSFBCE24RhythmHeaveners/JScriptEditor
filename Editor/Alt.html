@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<title>JavaScriptForge Alternate Editor - ILoveDogs5335's Other Works</title>
+<link id="favicon" rel="shortcut icon" type="image/png" href="Gvbvdxx.png" />
+<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+<script src="blockly_compressed.js"></script>
+<script src="blocks_compressed.js"></script>
+<script src="javascript_compressed.js"></script>
+<script src="msg/js/en.js"></script>
+<script src="html/scripts/FileSaver.js"></script>
+<script src="html/scripts/SpeakSynthesis.js"></script>
+<script src="scripts/main.js"></script>
+<body style="background-color:#949494; font-family:Arial;" id="HTML">
+<center>
+    <div id="Links" name="Links" style="font-famliy:Arial;">
+		<a style="color: #ccb3ff; text-shadow: 2px 2px 2px #9966ff"><b>JavaScriptForge</b></a>
+        <a style="font-famliy:Arial;">Links:</a>
+        <a href="../index.html" style="font-famliy:Arial;">Home</a>
+        <a href="./index.html" style="font-famliy:Arial;">Editor</a>
+        <a style="font-famliy:Arial; color:#00ffff;">(Alt)</a>
+        <a href="../HTMLLearners.html">Set Up HTML</a>
+        <a href="../Students.html">For Students</a> 
+	</div>
+    <div name="app" style="background-color:#ffff;">
+    <div class="row">
+        <div class="column">
+    <div id="blocklyArea"  style="height:calc(100vh - 40px); width:calc(100vw - 600px); border:0; position:relative;">
+        <div id="blocklyDiv" style="position: absolute border:0;"></div>
+    </div>
+        </div>
+        <div class="bottom">
+            <button onclick="run('t')" style="height: 30px; width: 80px; border:0;">Run</button>
+    <button onclick="copy()" style="height: 30px; width: 80px; border:0; padding: .5em;">Copy</button>
+    <button onclick="saveblock()" style="height: 30px; width: 80px; border:0;">Save</button>
+    <button onclick="loadblock()" style="height: 30px; width: 80px; border:0;">Load</button>
+    <button onclick="saveblockcode()" style="height: 30px; width: 80px; border:0;">Save code</button>
+    <button onclick="loadblockcode()" style="height: 30px; width: 80px; border:0;">Load code</button>
+        </div>
+        <div class="bottom">
+            <textarea type="text" style="height: 60px; width: 500px; border:0; resize: none;" id="p2" enabled="false" cols="infinity" rows="infinity" readonly>Output Of Your Code </textarea>
+        </div>
+        <div class="column">
+                    <textarea style="height: 480px; width: 500px; border:0; resize: none; " id="p1" enabled="false" cols="infinity" rows="infinity" textmode="multiline" readonly ></textarea>
+        </div>
+        
+        
+        
+    </div>
+     <style>
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    }
+    .bottom {
+    float: bottom;
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
+    </div>
+    <br>
+    
+    
+    
+</center>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="toolbox_style.css">
+
+
+
+
+<xml id="toolbox" style="display: none">
+        <!--Toolbox-->
+	  <category name="Logic (Blockly)" colour="14">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+		<block type="or"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean"></block>
+		<block type="logic_true"></block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+      </category>
+      <category name="Loops (Blockly)" colour="32">
+        <block type="wait">
+		  <value name="time">
+            <shadow type="math_number">
+              <field name="NUM">1000</field>
+            </shadow>
+          </value>
+		</block>
+		<block type="controls_repeat_ext">
+          <value name="TIMES">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_whileUntil"></block>
+		<block type="while"></block>
+        <block type="controls_for">
+          <value name="FROM">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="BY">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_forEach"></block>
+        <block type="controls_flow_statements"></block>
+      </category>
+      <category name="Math (Blockly)" colour="56">
+        <block type="math_number">
+          <field name="NUM">123</field>
+        </block>
+        <block type="math_arithmetic">
+          <value name="A">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="B">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_single">
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">9</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_trig">
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">45</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_constant"></block>
+        <block type="math_number_property">
+          <value name="NUMBER_TO_CHECK">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_round">
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">3.1</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_on_list"></block>
+        <block type="math_modulo">
+          <value name="DIVIDEND">
+            <shadow type="math_number">
+              <field name="NUM">64</field>
+            </shadow>
+          </value>
+          <value name="DIVISOR">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_constrain">
+          <value name="VALUE">
+            <shadow type="math_number">
+              <field name="NUM">50</field>
+            </shadow>
+          </value>
+          <value name="LOW">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="HIGH">
+            <shadow type="math_number">
+              <field name="NUM">100</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_random_int">
+          <value name="FROM">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number">
+              <field name="NUM">100</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_random_float"></block>
+        <block type="math_atan2">
+          <value name="X">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+      </category>
+      <category name="Text (Blockly)" colour="126">
+        <block type="text"></block>
+        <block type="text_join"></block>
+		<block type="scratch_join"><value name="TEXT1"><shadow type="text"><field name="TEXT">apple</field></shadow></value><value name="TEXT2"><shadow type="text"><field name="TEXT">banana</field></shadow></value></block>
+        <block type="text_append">
+          <value name="TEXT">
+            <shadow type="text"></shadow>
+          </value>
+        </block>
+        <block type="text_length">
+          <value name="VALUE">
+            <shadow type="text">
+		  </value>
+        </block>
+		  <block type="text_isEmpty">
+          <value name="VALUE">
+            <shadow type="text">
+              <field name="TEXT"></field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_indexOf">
+          <value name="VALUE">
+            <block type="variables_get">
+              <field name="VAR">text</field>
+            </block>
+          </value>
+          <value name="FIND">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_charAt">
+          <value name="VALUE">
+            <block type="variables_get">
+              <field name="VAR">text</field>
+            </block>
+          </value>
+        </block>
+        <block type="text_getSubstring">
+          <value name="STRING">
+            <block type="variables_get">
+              <field name="VAR">text</field>
+            </block>
+          </value>
+        </block>
+        <block type="text_changeCase">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_trim">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+		<block type="text_count">
+          <value name="SUB">
+            <shadow type="text"><field name="TEXT">a</field></shadow>
+          </value>
+          <value name="TEXT">
+            <shadow type="text"><field name="TEXT">banana</field></shadow>
+          </value>
+        </block>
+        <block type="text_replace">
+          <value name="FROM">
+            <shadow type="text"><field name="TEXT">m</field></shadow>
+          </value>
+          <value name="TO">
+            <shadow type="text"><field name="TEXT">w</field></shadow>
+          </value>
+          <value name="TEXT">
+            <shadow type="text"><field name="TEXT">mom</field></shadow>
+          </value>
+        </block>
+        <block type="text_reverse">
+          <value name="TEXT">
+            <shadow type="text"><field name="TEXT">cba</field></shadow>
+          </value>
+        </block>
+        <block type="text_print">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+        <block type="text_prompt_ext">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+		<block type="ask">
+          <value name="asktext">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+		<block type="confirm">
+          <value name="confirmedText">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+      </category>
+      <category name="Lists (Blockly)" colour="170">
+        <block type="lists_create_with">
+          <mutation items="0"></mutation>
+        </block>
+        <block type="lists_create_with"></block>
+        <block type="lists_repeat">
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">5</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="lists_length"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_indexOf">
+          <value name="VALUE">
+            <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_getIndex">
+        <value name="VALUE">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_setIndex">
+        <value name="LIST">
+          <block type="variables_get">
+            <field name="VAR">list</field>
+          </block>
+        </value>
+      </block>
+      <block type="lists_getSublist">
+        <value name="LIST">
+          <block type="variables_get">
+              <field name="VAR">list</field>
+            </block>
+          </value>
+        </block>
+        <block type="lists_split">
+          <value name="DELIM">
+            <shadow type="text">
+              <field name="TEXT">,</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="lists_sort"></block>
+		<block type="lists_reverse"></block>
+      </category>
+	  <category name="Variables (Blockly)" colour="210" custom="VARIABLE"></category>
+	  <category name="Custom (Blockly)" colour="270" custom="PROCEDURE"></category>
+	  <category name="Colors (Blockly)" colour="320">
+          <block type="colour_picker"></block>
+          <block type="colour_random"></block>
+          <block type="colour_rgb"></block>
+          <block type="colour_blend"></block></category>
+      <category name="Controls" colour="30">
+        <block type="controls_repeat_ext"></block>
+		<block type="controls_if"></block>
+        <block type="controls_ifelse"></block>
+      </category>
+      <category name="Logic" colour="63">
+           <block type="logic_boolean"></block>
+           <block type="logic_compare"></block>
+           <block type="logic_negate"></block>
+		   <block type="logic_true"></block>
+           <block type="logic_null"></block>
+           <block type="logic_ternary"></block>
+      </category>
+      <category name="Math" colour="255">
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+        <block type="math_trig"></block>
+        <block type="math_constant"></block>
+        <block type="math_number_property"></block>
+        <block type="math_round"></block>
+        <block type="math_on_list"></block>
+        <block type="math_modulo"></block>
+        <block type="math_constrain"></block>
+        <block type="math_random_int"></block>
+        <block type="math_atan2"></block>
+      </category>
+      <category name="Text" colour="182">
+          <block type="text"></block>
+          <block type="text_print"></block>
+          <block type="text_multiline"></block>
+          <block type="text_join"></block>
+          <block type="text_append"></block>
+          <block type="text_length"></block>
+          <block type="text_isEmpty"></block>
+          <block type="text_indexOf"></block>
+          <block type="text_charAt"></block>
+		  <block type="text_count"></block>
+		  <block type="text_replace"></block>
+		  <block type="text_reverse"></block>
+      </category>
+      <category name="Variables" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
+        <block type="variables_get"></block>
+        <block type="variables_set"></block>
+        <block type="math_change"></block>
+      </category> 
+      <category name="Lists" colour="%{BKY_LISTS_HUE}">
+        <block type="lists_create_empty"></block>
+        <block type="lists_repeat"></block>
+        <block type="lists_reverse"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_length"></block>
+        <block type="lists_get"></block>
+        <block type="lists_make"></block>
+        <block type="lists_make_item"></block>
+        <block type="list_text"></block>
+		<block type="lists_reverse"></block>
+      </category>        
+      <category name="Colours" colour="74">
+          <block type="colour_picker"></block>
+          <block type="colour_random"></block>
+          <block type="colour_rgb"></block>
+          <block type="colour_blend"></block>
+      </category>
+      <category name="Custom Blocks" custom="PROCEDURE" colour="320">
+      </category>
+        <category name="Debugging" colour="70">
+		<block type="log"></block>
+	</category>
+         <category name="Gvbvdxx's Blocks" colour="320">
+                           <block type="openlink"></block>
+                            <block type="speak"></block>
+                             <block type="savefile"></block>
+                              <block type="ask"></block>
+                               <block type="data_storage"></block>
+                                <block type="data_storage_read"></block>
+                                 <block type="data_storage_remove"></block>
+                                  <block type="wait"></block>
+                                   <block type="comment"></block>
+                                    <block type="confirm"></block>
+                                     <block type="while"></block>
+                                      <block type="geturl"></block>
+                                       <block type="async"></block>
+                                        <block type="did_press_key_"></block>                       		  
+         </category>
+         <category name="Scratch Blocks" colour="320">
+                          <block type="scratch_play_sound"></block>
+                          <block type="scratch_join"></block>
+                          <block type="or"></block>
+         </category>
+         <category name="Sounds" colour="300">
+             <block type="set_sound_component"><block type="text">Meow.wav</block></block>
+             <block type="play_pause_sound_component"></block>
+             <block type="is_doing_this_sound_component"></block>
+             <block type="set_setting_sound_component"></block>
+		 </category>
+		 <category name="Music" colour="0">
+             <block type="playnotegmidi"></block>
+	         <block type="calculate_note_as_play_rate"></block>
+         </category>
+		 <category name="Sounds (Inputs)" colour="320">
+			 <block type="scratch_play_sound"><value name="sound"><shadow type="text"><field name="TEXT">Meow</field></shadow></value></block>
+			 <block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+			 <block type="playnotegmidi"><value name="playnote"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
+		 </category>
+         <category name="Addons" toolboxitemid="categoryAddon" colour="50" id="addons">
+             <button text="Add an addon..." callbackkey="addAddon"></button>
+         </category>
+</xml>
+
+   <script src="index.js"></script>
+<script>
+    Blockly.Themes.Halloween = Blockly.Theme.defineTheme('1', {
+  'base': Blockly.Themes.Classic,
+  'componentStyles': {
+    'workspaceBackgroundColour': '#878787',
+    'toolboxBackgroundColour': '#b0b0b0',
+    'toolboxForegroundColour': '#fff',
+    'flyoutBackgroundColour': '#252526',
+    'flyoutForegroundColour': '#ccc',
+    'flyoutOpacity': 1,
+    'scrollbarColour': '#ff0000',
+    'insertionMarkerColour': '#fff',
+    'insertionMarkerOpacity': 0.3,
+    'scrollbarOpacity': 0.4,
+    'cursorColour': '#ffffff',
+    'blackBackground': '#ffffff'
+  }
+});
+    
+    
+    
+    
+  var blocklyArea = document.getElementById('blocklyArea');
+  var blocklyDiv = document.getElementById('blocklyDiv');
+  var workspace = Blockly.inject(blocklyDiv,
+                                 {toolbox: document.getElementById('toolbox'),
+  
+                                  media:"media/",
+
+      zoom:
+         {controls: true,
+          wheel: true,
+          startScale: 0.75,
+          maxScale: 5,
+          minScale: 0,
+          scaleSpeed: 1.20,
+          pinch: true},
+      move: {
+          scrollbars: true,
+          drag: true,
+          wheel: true,
+        },
+         grid:
+         {spacing: 20,
+          length: 3,
+          colour: '#ccc',
+          snap: true},
+     trashcan: false,
+	 renderer: 'zelos', theme: 'classic'
+								 });
+  var onresize = function(e) {
+    // Compute the absolute coordinates and dimensions of blocklyArea.
+    var element = blocklyArea;
+    var x = 0;
+    var y = 0;
+    do {
+      x += element.offsetLeft;
+      y += element.offsetTop;
+      element = element.offsetParent;
+    } while (element);
+    // Position blocklyDiv over blocklyArea.
+    blocklyDiv.style.left = x + 'px';
+    blocklyDiv.style.top = y + 'px';
+    blocklyDiv.style.width = blocklyArea.offsetWidth + 'px';
+    blocklyDiv.style.height = blocklyArea.offsetHeight + 'px';
+    Blockly.svgResize(workspace);
+  };
+  window.addEventListener('resize', onresize, false);
+  onresize();
+  Blockly.svgResize(workspace);
+</script>
+
+
+
+
+
+
+    <script>
+    function UpdateFunction() {
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    document.getElementById("p1").value = (code); }
+    workspace.addChangeListener(UpdateFunction);
+    function run(script)
+        {
+            var code = Blockly.JavaScript.workspaceToCode(workspace);
+            try {
+            document.getElementById("p2").value = (eval(code));
+            }
+            catch (e)
+            {
+            document.getElementById("p2").value = ("Error:\n" + e);
+            }
+        }
+    function copy()
+        {
+            var code = Blockly.JavaScript.workspaceToCode(workspace);
+            navigator.clipboard.writeText(code)
+        }
+    		function save1() {
+            var code = Blockly.JavaScript.workspaceToCode(workspace);
+            var userInput = code;
+			
+            var blob = new Blob([userInput], { type: "text/plain;charset=utf-8" });
+            saveAs(blob, "myscript.js");
+        }
+            function UpdateFunction() {
+    var code = Blockly.JavaScript.workspaceToCode(workspace);
+    document.getElementById("p1").value = (code); }
+    p1.addChangeListener(UpdateFunction);
+    function saveblock() {
+var xml = Blockly.Xml.workspaceToDom(workspace);
+var xml_text = Blockly.Xml.domToText(xml);
+        var codename = window.prompt("name of code, remeber that typing the same name will overwite the older version")
+        localStorage.setItem("blockly-saved-blocks-" + codename, xml_text);
+    }
+    function loadblock() {
+        var codename = window.prompt("name of code")
+	workspace.clear();
+          blocks = (localStorage.getItem("blockly-saved-blocks-" + codename));
+        var xml = Blockly.Xml.textToDom(blocks);
+Blockly.Xml.domToWorkspace(xml, workspace);
+    }
+    function loadblockcode() {
+        var savecode = window.prompt("paste code here")
+        workspace.clear();
+        var xml = Blockly.Xml.textToDom(savecode);
+        Blockly.Xml.domToWorkspace(xml, workspace);
+    }
+    function saveblockcode() {
+    xml = Blockly.Xml.workspaceToDom(workspace);
+   var xml_text = Blockly.Xml.domToText(xml);
+          navigator.clipboard.writeText(xml_text)
+        window.alert ("your save code is copied on to your clipboard")
+    }
+        if (!('fetch' in window)) {
+  console.log('Fetch API not found, try including the polyfill');
+}
+        function loadaddon(addonURL) {
+            try {
+            var addon1 = document.createElement('script');
+            addon1.onload = function() {
+            };
+            addon1.src = (addonURL);
+            document.getElementsByTagName('head')[0].appendChild(addon1);
+            }
+            catch {
+            console.error ("error when loading addons")
+            }
+            }
+        function addon_AddTo(){
+              var toolbox = document.getElementById('toolbox');
+  toolbox += '<xml>';
+  toolbox += '  <block type="controls_if"></block>';
+  toolbox += '  <block type="controls_whileUntil"></block>';
+  toolbox += '</xml>';
+  var workspace = Blockly.inject('blocklyDiv', {toolbox: toolbox});
+        } 
+        
+	    
+    </script>
+   <script src="gsmWindowFunction.js"></script>
+   <script src="gvbvdxx_blocks.js"></script>
+   <script src="URLsettings.js"></script>
+   <script src="exampleaddon.js"></script>
+   <script src="notnull.js"></script>
+   <script src="LoadExampleScript.js"></script>
+   <script src="custom_category.js"></script>
+   <script src="gvbvdxx-MIDI-engine/MIDI.js"></script>
+   <script src="keypressengine/key.js"></script>
+<script>
+window.addEventListener('beforeunload', function (e) {
+  // Cancel the event
+  e.preventDefault();
+  // Chrome requires returnValue to be set
+  e.returnValue = '';
+});
+</script>
