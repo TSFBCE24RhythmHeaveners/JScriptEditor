@@ -5,6 +5,7 @@
 <script src="blockly_compressed.js"></script>
 <script src="blocks_compressed.js"></script>
 <script src="javascript_compressed.js"></script>
+<script src="multiselect.js"></script>
 <script src="msg/js/en.js"></script>
 <script src="html/scripts/FileSaver.js"></script>
 <script src="html/scripts/SpeakSynthesis.js"></script>
@@ -566,7 +567,52 @@
           colour: '#ccc',
           snap: true},
      trashcan: false,
-	 renderer: 'zelos'}
+	 renderer: 'zelos',
+			copyPasteToStorage: true,
+    copyPasteToClipboard: true,
+    hideDisabledMenuItems: false,
+    enableBlockMenu: true,
+    enableWorkspaceMenu: true,
+    blockScope: {
+        comment: true,
+        copy: true,
+        deletable: true,
+        delete: true,
+        duplicate: true,
+        editable: true,
+        expand: true,
+        help: true,
+        inline: true,
+        movable: true,
+    },
+    workspaceScope: {
+        cleanup: true,
+        delete: true,
+        expand: true,
+        help: true,
+        paste: true,
+        redo: true,
+        reset: true,
+        select: true,
+        undo: true,
+    },
+    multiselectScope: {
+        cleanup: true,
+        comment: true,
+        copy: true,
+        deletable: true,
+        delete: true,
+        duplicate: true,
+        editable: true,
+        expand: true,
+        inline: true,
+        movable: true,
+        paste: true,
+        redo: true,
+        reset: true,
+        select: true,
+        undo: true,
+    }}
                                 );
   var onresize = function(e) {
     // Compute the absolute coordinates and dimensions of blocklyArea.
