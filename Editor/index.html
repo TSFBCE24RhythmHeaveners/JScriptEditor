@@ -477,8 +477,9 @@
         <category name="Debugging" colour="70">
 		<block type="log"></block>
 	</category>
-         <category name="Gvbvdxx's Blocks" colour="320">
-                           <block type="openlink"></block>
+         <category name="Extra Blocks" colour="320">
+                          <block type="openlink"></block>
+			               <block type="openlinkself"></block>
                             <block type="speak"></block>
                              <block type="savefile"></block>
                               <block type="ask"></block>
@@ -503,15 +504,18 @@
              <block type="play_pause_sound_component"></block>
              <block type="is_doing_this_sound_component"></block>
              <block type="set_setting_sound_component"></block>
-		 </category>
-		 <category name="Music" colour="0">
-             <block type="playnotegmidi"></block>
+			 <block type="playnotegmidi"></block>
 	         <block type="calculate_note_as_play_rate"></block>
+		 </category>
+		 <category name="Extras (Inputs)" colour="0">
+             <block type="openlink"><value name="OpenLinkURL"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+			 <block type="openlinkself"><value name="OpenLinkURLSelf"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
          </category>
 		 <category name="Sounds (Inputs)" colour="320">
 			 <block type="scratch_play_sound"><value name="sound"><shadow type="text"><field name="TEXT">Meow</field></shadow></value></block>
 			 <block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 			 <block type="playnotegmidi"><value name="playnote"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
+			 <block type="calculate_note_as_play_rate"><value name="convert note"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
 		 </category>
          <category name="Addons" toolboxitemid="categoryAddon" colour="50" id="addons">
              <button text="Add an addon..." callbackkey="addAddon"></button>
@@ -684,6 +688,7 @@ Blockly.Xml.domToWorkspace(xml, workspace);
    <script src="gvbvdxx_blocks.js"></script>
    <script src="URLsettings.js"></script>
    <script src="exampleaddon.js"></script>
+   <script src="openlinkself.js"></script>
    <script src="notnull.js"></script>
    <script src="LoadExampleScript.js"></script>
    <script src="custom_category.js"></script>
