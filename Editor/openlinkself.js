@@ -18,6 +18,6 @@ Blockly.defineBlocksWithJsonArray([
 Blockly.JavaScript['openlinkself'] = function(block) {
   var value_openlinkurlself = Blockly.JavaScript.valueToCode(block, 'OpenLinkURLSelf', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = 'window.open (' + value_openlinkurlself + ', self);\n';
+  var code = 'window.open (' + value_openlinkurlself + ', "_self");\n';
   return code;
 };
