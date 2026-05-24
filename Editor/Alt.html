@@ -104,7 +104,7 @@
             </shadow>
           </value>
 		</block>
-		<block type="wait_seconds"><value name="SECONDS"><shadow type="math_number"><field name="NUM">apple</field></shadow></value></block>
+		<block type="wait_seconds"><value name="seconds"><shadow type="math_number"><field name="NUM">apple</field></shadow></value></block>
 		<block type="controls_repeat_ext">
           <value name="TIMES">
             <shadow type="math_number">
@@ -520,6 +520,8 @@
 			 <block type="scratch_play_sound"><value name="sound"><shadow type="text"><field name="TEXT">Meow.wav</field></shadow></value></block>
 			 <block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 			 <block type="playnotegmidi"><value name="playnote"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
+			 <block type="create_oscillator"><value name="FREQUENCY"><shadow type="math_number"><field name="NUM">440</field></shadow></value><value name="DURATION"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+			 <block type="beep"><value name="FREQUENCY"><shadow type="math_number"><field name="NUM">440</field></shadow></value><value name="DURATION"><shadow type="math_number"><field name="NUM">1000</field></shadow></value></block>
 			 <block type="calculate_note_as_play_rate"><value name="convert note"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
 		 </category>
          <category name="Addons" toolboxitemid="categoryAddon" colour="50" id="addons">
