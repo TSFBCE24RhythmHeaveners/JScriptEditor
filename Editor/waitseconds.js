@@ -1,22 +1,28 @@
-Blockly.common.defineBlocksWithJsonArray([
+Blockly.defineBlocksWithJsonArray([
 {
   "type": "wait_seconds",
-  "message0": "wait %1 seconds",
+  "tooltip": "Pause for a specific amount of seconds",
+  "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/",
+  "message0": "wait for %1 seconds %2",
   "args0": [
     {
-       "type": "input_value",
-       "name": "SECONDS",
-       "check": "Number"
+      "type": "input_value",
+      "name": "seconds",
+      "check": "Number"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
     }
-   ],
+  ],
   "previousStatement": null,
-  "nextStatement": null,
-  "colour": %{BKY_LOOPS_HUE},
-  "tooltip": "Wait for specified number of seconds",
-  "helpUrl": ""
+  "colour": 120,
+  "inputsInline": false
 }
 ]);
 Blockly.JavaScript['wait_seconds'] = function(block)  {
-  const seconds = Blockly.JavaScript.valueToCode(block, 'SECONDS', Blockly.JavaScript.ORDER_NONE) || '1';
-  return `await waitSeconds(${seconds});\n`;
+  var value_seconds = Blockly.JavaScript.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_statement = Blockly.JavaScript.statementToCode(block, 'statement');
+  var code = 'setTimeout(() => {  ' + statements_statement + ' },(' + value_seconds + '));\n';
+  return code;
 };
