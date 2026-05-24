@@ -104,6 +104,7 @@
             </shadow>
           </value>
 		</block>
+		<block type="wait_seconds"><value name="SECONDS"><shadow type="math_number"><field name="NUM">apple</field></shadow></value></block>
 		<block type="controls_repeat_ext">
           <value name="TIMES">
             <shadow type="math_number">
@@ -411,6 +412,7 @@
           <block type="colour_blend"></block></category>
       <category name="Controls" colour="30">
         <block type="controls_repeat_ext"></block>
+		<block type="wait_seconds"></block>
 		<block type="controls_if"></block>
         <block type="controls_ifelse"></block>
       </category>
@@ -501,10 +503,12 @@
                           <block type="or"></block>
          </category>
          <category name="Sounds" colour="300">
-             <block type="set_sound_component"><block type="text">Meow.wav</block></block>
+             <block type="set_sound_component"></block>
              <block type="play_pause_sound_component"></block>
              <block type="is_doing_this_sound_component"></block>
              <block type="set_setting_sound_component"></block>
+			 <block type="create_oscillator"></block>
+			 <block type="beep"></block>
 			 <block type="playnotegmidi"></block>
 	         <block type="calculate_note_as_play_rate"></block>
 		 </category>
@@ -513,7 +517,7 @@
 			 <block type="openlinkself"><value name="OpenLinkURLSelf"><shadow type="text"><field name="TEXT">URL</field></shadow></value></block>
          </category>
 		 <category name="Sounds (Inputs)" colour="320">
-			 <block type="scratch_play_sound"><value name="sound"><shadow type="text"><field name="TEXT">Meow</field></shadow></value></block>
+			 <block type="scratch_play_sound"><value name="sound"><shadow type="text"><field name="TEXT">Meow.wav</field></shadow></value></block>
 			 <block type="speak"><value name="SpeakText"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 			 <block type="playnotegmidi"><value name="playnote"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
 			 <block type="calculate_note_as_play_rate"><value name="convert note"><shadow type="math_number"><field name="NUM">60</field></shadow></value></block>
@@ -691,6 +695,8 @@ Blockly.Xml.domToWorkspace(xml, workspace);
    <script src="exampleaddon.js"></script>
    <script src="notnull.js"></script>
    <script src="openlinkself.js"></script>
+   <script src="waitseconds.js"></script>
+   <script src="synthsound.js"></script>
    <script src="LoadExampleScript.js"></script>
    <script src="custom_category.js"></script>
    <script src="gvbvdxx-MIDI-engine/MIDI.js"></script>
