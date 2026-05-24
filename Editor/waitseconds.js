@@ -23,6 +23,6 @@ Blockly.defineBlocksWithJsonArray([
 Blockly.JavaScript['wait_seconds'] = function(block)  {
   var value_seconds = Blockly.JavaScript.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_statement = Blockly.JavaScript.statementToCode(block, 'statement');
-  var code = 'setTimeout(() => {  ' + statements_statement + ' },(' + value_seconds + '));\n';
+  var code = 'setTimeout(() => {  ' + statements_statement + ' },(' + value_seconds + ' * 1000));\n';
   return code;
 };
