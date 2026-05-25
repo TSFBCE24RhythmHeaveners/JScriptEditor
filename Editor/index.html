@@ -418,9 +418,8 @@
           <block type="colour_rgb"></block>
           <block type="colour_blend"></block></category>
       <category name="Controls" colour="30">
-        <block type="controls_repeat"></block>
-		<block type="controls_repeat_ext"></block>
-	    <block type="wait_seconds"></block>
+        <block type="controls_repeat_ext"></block>
+		<block type="wait_seconds"></block>
 		<block type="controls_if"></block>
         <block type="controls_ifelse"></block>
       </category>
@@ -566,7 +565,7 @@
       zoom:
          {controls: true,
           wheel: true,
-          startScale: 1.0,
+          startScale: 0.75,
           maxScale: 5,
           minScale: 0,
           scaleSpeed: 1.20,
@@ -582,8 +581,8 @@
           colour: '#ccc',
           snap: true},
      trashcan: false,
-	 renderer: 'geras',
-	 theme: 'modern'
+	 renderer: 'zelos',
+	 theme: 'classic'
 								 });
   var onresize = function(e) {
     // Compute the absolute coordinates and dimensions of blocklyArea.
@@ -699,10 +698,10 @@ Blockly.Xml.domToWorkspace(xml, workspace);
    <script src="gvbvdxx_blocks.js"></script>
    <script src="URLsettings.js"></script>
    <script src="exampleaddon.js"></script>
-   <script src="openlinkself.js"></script>
    <script src="notnull.js"></script>
-   <script src="LoadExampleScript.js"></script>
+   <script src="openlinkself.js"></script>
    <script src="waitseconds.js"></script>
+   <script src="LoadExampleScript.js"></script>
    <script src="custom_category.js"></script>
    <script src="gvbvdxx-MIDI-engine/MIDI.js"></script>
    <script src="keypressengine/key.js"></script>
