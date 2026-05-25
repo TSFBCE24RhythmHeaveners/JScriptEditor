@@ -1,7 +1,7 @@
 Blockly.defineBlocksWithJsonArray([
 {
   "type": "wait_seconds",
-  "tooltip": "Pause for a specific amount of seconds",
+  "tooltip": "Wait for a specific amount of seconds",
   "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/",
   "message0": "wait for %1 seconds %2 %3",
   "args0": [
