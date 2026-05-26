@@ -49,13 +49,13 @@ javascript.javascriptGenerator.forBlock['text_padleft'] = function() {
   const value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
   const value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
   const value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
-  const code = '"' + value_target + '"padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ')';
+  const code = '"' + value_target + '"padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
   return [code, javascript.Order.NONE];
 };
 javascript.javascriptGenerator.forBlock['text_padright'] = function() {
   const value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
   const value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
   const value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
-  const code = '"' + value_target + '"padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ')';
+  const code = '"' + value_target + '"padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
   return [code, javascript.Order.NONE];
 };
