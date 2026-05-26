@@ -45,17 +45,17 @@ Blockly.common.defineBlocksWithJsonArray([{
   "colour": 150,
   "inputsInline": true
 }]);
-javascript.javascriptGenerator.forBlock['text_padleft'] = function() {
-  const value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
-  const value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
-  const value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
-  const code = '"' + value_target + '"padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
+Blockly.JavaScript['text_padleft'] = function() {
+  var value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
+  var value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
+  var value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
+  var code = '"' + value_target + '"padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
   return [code, javascript.Order.NONE];
 };
-javascript.javascriptGenerator.forBlock['text_padright'] = function() {
-  const value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
-  const value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
-  const value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
-  const code = '"' + value_target + '"padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
+Blockly.JavaScript['text_padright'] = function() {
+  var value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
+  var value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
+  var value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
+  var code = '"' + value_target + '"padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
   return [code, javascript.Order.NONE];
 };
