@@ -104,7 +104,8 @@
             </shadow>
           </value>
 		</block>
-		<block type="wait_seconds"><value name="seconds"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+		<block type="wait_seconds"><value name="SECONDS"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
+		<block type="wait_seconds_do"><value name="seconds"><shadow type="math_number"><field name="NUM">1</field></shadow></value></block>
 		<block type="controls_repeat">
 		  <value name="TIMES">
             <shadow type="math_number">
@@ -328,6 +329,28 @@
             <shadow type="text"><field name="TEXT">cba</field></shadow>
           </value>
         </block>
+		<block type="text_padleft">
+          <value name="target">
+            <shadow type="text"><field name="TEXT">def</field></shadow>
+          </value>
+		  <value name="paddingamount">
+            <shadow type="math_num"><field name="NUM">3</field></shadow>
+          </value>
+		  <value name="paddingsymbol">
+            <shadow type="text"><field name="TEXT">abc</field></shadow>
+          </value>
+        </block>
+		<block type="text_padright">
+          <value name="target">
+            <shadow type="text"><field name="TEXT">abc</field></shadow>
+          </value>
+		  <value name="paddingamount">
+            <shadow type="math_num"><field name="NUM">6</field></shadow>
+          </value>
+		  <value name="paddingsymbol">
+            <shadow type="text"><field name="TEXT">def</field></shadow>
+          </value>
+        </block>
         <block type="text_print">
           <value name="TEXT">
             <shadow type="text">
@@ -336,6 +359,7 @@
           </value>
         </block>
 		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+		<block type="throw_error"><value name="error"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
         <block type="text_prompt_ext">
           <value name="TEXT">
             <shadow type="text">
@@ -419,7 +443,8 @@
           <block type="colour_blend"></block></category>
       <category name="Controls" colour="30">
 		<block type="controls_repeat_ext"></block>
-	    <block type="wait_seconds"></block>
+		<block type="wait_seconds"></block>
+		<block type="wait_seconds_do"></block>
 		<block type="controls_if"></block>
         <block type="controls_ifelse"></block>
       </category>
@@ -455,8 +480,6 @@
           <block type="text_isEmpty"></block>
           <block type="text_indexOf"></block>
           <block type="text_charAt"></block>
-		  <block type="text_count"></block>
-		  <block type="text_replace"></block>
 		  <block type="text_reverse"></block>
       </category>
       <category name="Variables" custom="VARIABLE" colour="%{BKY_VARIABLES_HUE}">
@@ -502,7 +525,8 @@
                                      <block type="while"></block>
                                       <block type="geturl"></block>
                                        <block type="async"></block>
-                                        <block type="did_press_key_"></block>                       		  
+                                        <block type="did_press_key_"></block>      
+			                             <block type="throw_error"></block>
          </category>
          <category name="Scratch Blocks" colour="320">
                           <block type="scratch_play_sound"></block>
@@ -702,6 +726,8 @@ Blockly.Xml.domToWorkspace(xml, workspace);
    <script src="notnull.js"></script>
    <script src="LoadExampleScript.js"></script>
    <script src="waitseconds.js"></script>
+   <script src="paddingtext.js"></script>
+   <script src="throwerror.js"></script>
    <script src="custom_category.js"></script>
    <script src="gvbvdxx-MIDI-engine/MIDI.js"></script>
    <script src="keypressengine/key.js"></script>
