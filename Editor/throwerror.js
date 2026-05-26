@@ -6,7 +6,7 @@ Blockly.common.defineBlocksWithJsonArray([{
   "args0": [
     {
       "type": "input_value",
-      "name": "NAME"
+      "name": "error"
     }
   ],
   "previousStatement": null,
