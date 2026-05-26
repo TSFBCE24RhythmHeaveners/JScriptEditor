@@ -46,16 +46,16 @@ Blockly.common.defineBlocksWithJsonArray([{
   "inputsInline": true
 }]);
 Blockly.JavaScript['text_padleft'] = function() {
-  var value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
-  var value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
-  var value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
+  var value_target = Blockly.JavaScript.valueToCode(block, 'target', javascript.Order.ATOMIC);
+  var value_paddingamount = Blockly.JavaScript.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
+  var value_paddingsymbol = Blockly.JavaScript.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
   var code = '"' + value_target + '"padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
   return [code, javascript.Order.NONE];
 };
 Blockly.JavaScript['text_padright'] = function() {
-  var value_target = generator.valueToCode(block, 'target', javascript.Order.ATOMIC);
-  var value_paddingamount = generator.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
-  var value_paddingsymbol = generator.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
+  var value_target = Blockly.JavaScript.valueToCode(block, 'target', javascript.Order.ATOMIC);
+  var value_paddingamount = Blockly.JavaScript.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
+  var value_paddingsymbol = Blockly.JavaScript.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
   var code = '"' + value_target + '"padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ');\n';
   return [code, javascript.Order.NONE];
 };
