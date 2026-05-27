@@ -92,25 +92,25 @@ Blockly.JavaScript['text_padleft'] = function(block) {
   var value_target = Blockly.JavaScript.valueToCode(block, 'target', javascript.Order.ATOMIC);
   var value_paddingamount = Blockly.JavaScript.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
   var value_paddingsymbol = Blockly.JavaScript.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
-  var code = '"' + value_target + '".padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ');';
+  var code = '("' + value_target + '".padStart(' + value_paddingamount + ', ' + value_paddingsymbol + ');';
   return [code, javascript.Order.ATOMIC]
 };
 Blockly.JavaScript['text_padright'] = function(block) {
   var value_target = Blockly.JavaScript.valueToCode(block, 'target', javascript.Order.ATOMIC);
   var value_paddingamount = Blockly.JavaScript.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
   var value_paddingsymbol = Blockly.JavaScript.valueToCode(block, 'paddingsymbol', javascript.Order.ATOMIC);
-  var code = '"' + value_target + '".padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ');';
+  var code = '("' + value_target + '".padEnd(' + value_paddingamount + ', ' + value_paddingsymbol + ');';
   return [code, javascript.Order.ATOMIC]
 };
 Blockly.JavaScript['repeat_text'] = function(block) {
   var repeattextamount = Blockly.JavaScript.valueToCode(block, 'repeattextamount', javascript.Order.ATOMIC);
   var repeattextstring = Blockly.JavaScript.valueToCode(block, 'repeattextstring', javascript.Order.ATOMIC);
-  var code = '' + repeattextstring + '.repeat(' + repeattextamount + ');';
+  var code = '(' + repeattextstring + '.repeat(' + repeattextamount + ');';
   return [code, javascript.Order.ATOMIC]
 };
 Blockly.JavaScript['letter_oftext'] = function(block) {
   var value_letternumber_number = Blockly.JavaScript.valueToCode(block, 'letternumber_number', javascript.Order.ATOMIC);
   var value_letternumber_target = Blockly.JavaScript.valueToCode(block, 'letternumber_target', javascript.Order.ATOMIC);
-  var code = '' + value_letternumber_target + '.charAt(' + value_letternumber_number + ');';
+  var code = '(' + value_letternumber_target + '.charAt(' + value_letternumber_number + ');';
   return [code, javascript.Order.ATOMIC]
 };
