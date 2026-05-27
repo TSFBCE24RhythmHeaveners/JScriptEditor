@@ -14,7 +14,7 @@ Blockly.common.defineBlocksWithJsonArray([{
   "colour": 120,
   "inputsInline": true
 }]);
-Blockly.JavaScript['throw_error'] = function() {
+Blockly.JavaScript['throw_error'] = function(block) {
   var value_error = Blockly.JavaScript.valueToCode(block, 'error', javascript.Order.ATOMIC);
   var code = 'throw new Error ("' + value_error + '");\n';
   return code;
