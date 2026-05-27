@@ -1,4 +1,5 @@
-Blockly.common.defineBlocksWithJsonArray([{
+Blockly.common.defineBlocksWithJsonArray([
+{
   "type": "throw_error",
   "tooltip": "Throws an error.",
   "helpUrl": "",
@@ -13,7 +14,8 @@ Blockly.common.defineBlocksWithJsonArray([{
   "nextStatement": null,
   "colour": 120,
   "inputsInline": true
-}]);
+}
+]);
 Blockly.JavaScript['throw_error'] = function(block) {
   var value_error = Blockly.JavaScript.valueToCode(block, 'error', javascript.Order.ATOMIC);
   var code = 'throw new Error ("' + value_error + '");\n';
