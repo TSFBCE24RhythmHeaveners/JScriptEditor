@@ -1,4 +1,4 @@
-Blockly.common.defineBlocksWithJsonArray([
+Blockly.defineBlocksWithJsonArray([
 {
   "type": "throw_error",
   "message0": "throw error %1",
