@@ -1,4 +1,4 @@
-Blockly.common.defineBlocksWithJsonArray([
+Blockly.defineBlocksWithJsonArray([
 {
   "type": "text_padleft",
   "tooltip": "Pad the left of the text.",
