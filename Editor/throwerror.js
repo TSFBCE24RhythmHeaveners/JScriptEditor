@@ -12,7 +12,8 @@ Blockly.defineBlocksWithJsonArray([
   "nextStatement": null,
   "colour": 120,
   "tooltip": "Throws an error.",
-  "helpUrl": ""
+  "helpUrl": "",
+  "inputsInline": false
 }
 ]);
 Blockly.JavaScript['throw_error'] = function(block) {
