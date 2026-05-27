@@ -1,4 +1,5 @@
-Blockly.common.defineBlocksWithJsonArray([{
+Blockly.common.defineBlocksWithJsonArray([
+{
   "type": "text_padleft",
   "tooltip": "Pad the left of the text.",
   "helpUrl": "",
@@ -21,7 +22,8 @@ Blockly.common.defineBlocksWithJsonArray([{
   "output": null,
   "colour": 150,
   "inputsInline": true
-},{
+},
+{
   "type": "text_padright",
   "tooltip": "Pad the right of the text.",
   "helpUrl": "",
@@ -44,7 +46,8 @@ Blockly.common.defineBlocksWithJsonArray([{
   "output": null,
   "colour": 150,
   "inputsInline": true
-}]);
+}
+]);
 Blockly.JavaScript['text_padleft'] = function(block) {
   var value_target = Blockly.JavaScript.valueToCode(block, 'target', javascript.Order.ATOMIC);
   var value_paddingamount = Blockly.JavaScript.valueToCode(block, 'paddingamount', javascript.Order.ATOMIC);
