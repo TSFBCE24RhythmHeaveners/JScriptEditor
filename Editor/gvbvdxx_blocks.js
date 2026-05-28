@@ -626,10 +626,7 @@ Blockly.defineBlocksWithJsonArray([
     },
     {
       "type": "input_value",
-      "name": "text",
-      "check": [
-        "Number",
-        "String"
+      "name": "text"
       ]
     }
   ],
