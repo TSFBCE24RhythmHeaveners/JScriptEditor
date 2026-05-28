@@ -1,11 +1,11 @@
 Blockly.defineBlocksWithJsonArray([
 {
-  "type": "openlinkself",
-  "message0": "open link %1 in the same tab",
+  "type": "openlinknew",
+  "message0": "open link %1 in a new tab",
   "args0": [
     {
       "type": "input_value",
-      "name": "OpenLinkURLSelf",
+      "name": "OpenLinkURLNew",
       "check": "String"
     }
   ],
@@ -15,12 +15,12 @@ Blockly.defineBlocksWithJsonArray([
   "tooltip": "",
   "helpUrl": ""
 },{
-  "type": "openlinknew",
-  "message0": "open link %1 in the new tab",
+  "type": "openlinkself",
+  "message0": "open link %1 in the same tab",
   "args0": [
     {
       "type": "input_value",
-      "name": "OpenLinkURLNew",
+      "name": "OpenLinkURLSelf",
       "check": "String"
     }
   ],
