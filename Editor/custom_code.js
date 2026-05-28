@@ -21,6 +21,6 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 Blockly.JavaScript['custom_code'] = function(block) {
   var your_own_code = Blockly.JavaScript.valueToCode(block, 'yourowncode', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = ' + your_own_code + ';
+  var code = '' + your_own_code + '\n';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
