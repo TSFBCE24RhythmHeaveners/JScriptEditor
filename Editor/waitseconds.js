@@ -12,7 +12,7 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 240,
-  "tooltip": "Wait for specified number of seconds",
+  "tooltip": "Wait for a specified number of seconds",
   "helpUrl": ""
 },{
   "type": "wait_seconds_end",
