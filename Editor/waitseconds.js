@@ -1,7 +1,7 @@
 Blockly.defineBlocksWithJsonArray([
 {
   "type": "await_wait_seconds",
-  "message0": "wait %1 seconds",
+  "message0": "await wait %1 seconds",
   "args0": [
     {
       "type": "input_value",
@@ -11,7 +11,7 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 120,
+  "colour": 240,
   "tooltip": "Wait for specified number of seconds",
   "helpUrl": ""
 },{
