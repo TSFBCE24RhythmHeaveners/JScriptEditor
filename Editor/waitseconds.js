@@ -65,7 +65,7 @@ Blockly.JavaScript['await_wait_seconds'] = function(block) {
   const seconds = Blockly.JavaScript.valueToCode(block, 'SECONDS', Blockly.JavaScript.ORDER_NONE) || '1';
   return `await waitSeconds(${seconds});\n`;
 };
-Blockly.JavaScript['wait_seconds'] = function(block)  {
+Blockly.JavaScript['wait_seconds_end'] = function(block)  {
   var value_seconds = Blockly.JavaScript.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_ATOMIC);
   var statements_statement = Blockly.JavaScript.statementToCode(block, 'statement');
   var code = 'setTimeout(() => {  ' + statements_statement + ' },((' + value_seconds + ') * 1000));\n';
