@@ -111,6 +111,6 @@ Blockly.JavaScript['repeat_text'] = function(block) {
 Blockly.JavaScript['letter_oftext'] = function(block) {
   var value_letternumber_number = Blockly.JavaScript.valueToCode(block, 'letternumber_number', javascript.Order.ATOMIC);
   var value_letternumber_target = Blockly.JavaScript.valueToCode(block, 'letternumber_target', javascript.Order.ATOMIC);
-  var code = '' + value_letternumber_target + '.charAt(' + value_letternumber_number + ')';
+  var code = '' + value_letternumber_target + '.charAt((' + value_letternumber_number + ') + 1)';
   return [code, javascript.Order.ATOMIC]
 };
