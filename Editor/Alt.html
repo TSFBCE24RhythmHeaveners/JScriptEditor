@@ -448,6 +448,9 @@
           </value>
         </block>
         <block type="lists_sort"></block>
+        <block type="lists_make"></block>
+        <block type="lists_make_item"><value name="text"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+        <block type="list_text"></block>
 		<block type="lists_reverse"></block>
       </category>
 	  <category name="Variables (Blockly)" colour="210" custom="VARIABLE"></category>
@@ -528,7 +531,8 @@
 		<block type="throw_error"></block>
 	</category>
          <category name="Extra Blocks" colour="320">
-                          <block type="openlink"></block>
+                         <block type="custom_code"></block>
+			              <block type="openlink"></block>
 			               <block type="openlinkself"></block>
                             <block type="speak"></block>
                              <block type="savefile"></block>
@@ -600,7 +604,7 @@
   var workspace = Blockly.inject(blocklyDiv,
                                  {toolbox: document.getElementById('toolbox'),
   
-                                  media:"media/",
+                                  media:"media/sounds",
 
       zoom:
          {controls: true,
@@ -620,7 +624,7 @@
           length: 3,
           colour: '#ccc',
           snap: true},
-     trashcan: false,
+     trashcan: true,
 	 renderer: 'geras',
 	 theme: 'modern'
 								 });
@@ -742,6 +746,7 @@ Blockly.Xml.domToWorkspace(xml, workspace);
    <script src="notnull.js"></script>
    <script src="moretextoperations.js"></script>
    <script src="throwerror.js"></script>
+   <script src="custom_code.js"></script>
    <script src="LoadExampleScript.js"></script>
    <script src="waitseconds.js"></script>
    <script src="custom_category.js"></script>
