@@ -1,6 +1,6 @@
 Blockly.defineBlocksWithJsonArray([
 {
-  "type": "wait_seconds",
+  "type": "await_wait_seconds",
   "message0": "wait %1 seconds",
   "args0": [
     {
@@ -14,8 +14,29 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 120,
   "tooltip": "Wait for specified number of seconds",
   "helpUrl": ""
-},
-{
+},{
+  "type": "wait_seconds",
+  "tooltip": "Wait for a specific amount of seconds",
+  "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/",
+  "message0": "wait %1 seconds %2 %3 end",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "seconds",
+      "check": "Number"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "previousStatement": null,
+  "colour": 120,
+  "inputsInline": true
+},{
   "type": "wait_seconds_do",
   "tooltip": "Wait for a specific amount of seconds",
   "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/",
@@ -40,9 +61,15 @@ Blockly.defineBlocksWithJsonArray([
   "inputsInline": true
 }
 ]);
-Blockly.JavaScript['wait_seconds'] = function(block) {
+Blockly.JavaScript['await_wait_seconds'] = function(block) {
   const seconds = Blockly.JavaScript.valueToCode(block, 'SECONDS', Blockly.JavaScript.ORDER_NONE) || '1';
   return `await waitSeconds(${seconds});\n`;
+};
+Blockly.JavaScript['wait_seconds'] = function(block)  {
+  var value_seconds = Blockly.JavaScript.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_ATOMIC);
+  var statements_statement = Blockly.JavaScript.statementToCode(block, 'statement');
+  var code = 'setTimeout(() => {  ' + statements_statement + ' },((' + value_seconds + ') * 1000));\n';
+  return code;
 };
 Blockly.JavaScript['wait_seconds_do'] = function(block)  {
   var value_seconds = Blockly.JavaScript.valueToCode(block, 'seconds', Blockly.JavaScript.ORDER_ATOMIC);
