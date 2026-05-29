@@ -28,7 +28,7 @@ BLockly.defineBlocksWithJsonArray([
   "colour": 60
 }
 ]);
-Blockly.JavaScript['hat_block'] = function(block) {
+Blockly.JavaScript['clear_timeout_hat'] = function(block) {
   var code = 'clearTimeout()';
   return code;
 };
