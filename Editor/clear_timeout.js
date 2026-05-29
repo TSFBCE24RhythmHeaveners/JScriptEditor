@@ -12,10 +12,11 @@ BLockly.defineBlocksWithJsonArray([
   ],
   "nextStatement": null,
   "colour": 60,
-},{
+},
+{
   "type": "clear_timeout",
   "tooltip": "Clears any timeouts.",
-  "helpUrl": "",
+  "helpUrl": "https://www.w3schools.com/jsref/met_win_cleartimeout.asp",
   "message0": "clear timeouts %1",
   "args0": [
     {
