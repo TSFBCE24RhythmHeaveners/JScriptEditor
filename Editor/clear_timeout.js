@@ -1,4 +1,4 @@
-BLockly.defineBlocksWithJsonArray([
+Blockly.defineBlocksWithJsonArray([
 {
   "type": "clear_timeout_hat",
   "tooltip": "This hat block does nothing but to clear timeouts.",
