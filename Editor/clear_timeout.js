@@ -1,6 +1,6 @@
 BLockly.defineBlocksWithJsonArray([
 {
-  "type": "clear_timeouts_hat",
+  "type": "clear_timeout_hat",
   "tooltip": "This hat block does nothing but to clear timeouts.",
   "helpUrl": "https://www.w3schools.com/jsref/met_win_cleartimeout.asp",
   "message0": "start and clear timeouts %1",
