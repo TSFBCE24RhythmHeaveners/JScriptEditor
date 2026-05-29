@@ -42,14 +42,14 @@ Blockly.defineBlocksWithJsonArray([
 }
 ]);
 Blockly.JavaScript['clear_timeout_hat'] = function(block) {
-  var code = 'clearTimeout()';
+  var code = 'clearTimeout();\n';
   return code;
 };
 Blockly.JavaScript['clear_timeout'] = function(block) {
-  var code = 'clearTimeout()';
+  var code = 'clearTimeout();\n';
   return code;
 };
 Blockly.JavaScript['clear_timeout_stop'] = function(block) {
-  var code = 'clearTimeout()';
+  var code = 'clearTimeout();\n';
   return code;
 };
