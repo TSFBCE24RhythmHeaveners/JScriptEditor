@@ -30,7 +30,7 @@ Blockly.defineBlocksWithJsonArray([
   "type": "clear_timeout_stop",
   "tooltip": "Clears any timeouts; then stops the script.",
   "helpUrl": "https://www.w3schools.com/jsref/met_win_cleartimeout.asp",
-  "message0": "clear timeout and stop %1",
+  "message0": "clear timeouts and stop %1",
   "args0": [
     {
       "type": "input_dummy",
