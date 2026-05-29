@@ -12,8 +12,7 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "nextStatement": null,
   "colour": 60,
-},
-{
+},{
   "type": "clear_timeout",
   "tooltip": "Clears any timeouts.",
   "helpUrl": "https://www.w3schools.com/jsref/met_win_cleartimeout.asp",
@@ -27,6 +26,19 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 60
+},{
+  "type": "clear_timeout_stop",
+  "tooltip": "Clears any timeouts; then stops the script.",
+  "helpUrl": "https://www.w3schools.com/jsref/met_win_cleartimeout.asp",
+  "message0": "clear timeout and stop %1",
+  "args0": [
+    {
+      "type": "input_dummy",
+      "name": ""
+    }
+  ],
+  "previousStatement": null,
+  "colour": 60
 }
 ]);
 Blockly.JavaScript['clear_timeout_hat'] = function(block) {
@@ -34,6 +46,10 @@ Blockly.JavaScript['clear_timeout_hat'] = function(block) {
   return code;
 };
 Blockly.JavaScript['clear_timeout'] = function(block) {
+  var code = 'clearTimeout()';
+  return code;
+};
+Blockly.JavaScript['clear_timeout_stop'] = function(block) {
   var code = 'clearTimeout()';
   return code;
 };
