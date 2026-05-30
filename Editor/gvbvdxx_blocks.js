@@ -2,7 +2,7 @@
 Blockly.defineBlocksWithJsonArray([
  {
   "type": "openlink",
-  "message0": "Open Link %1",
+  "message0": "open link %1",
   "args0": [
     {
       "type": "input_value",
@@ -18,7 +18,7 @@ Blockly.defineBlocksWithJsonArray([
 },
  {
    "type": "speak",
-   "message0": "System Synth Speak %1",
+   "message0": "speak %1",
    "args0": [
      {
        "type": "input_value",
@@ -34,7 +34,7 @@ Blockly.defineBlocksWithJsonArray([
  },
 {
   "type": "savefile",
-  "message0": "%1 Save File %2 Name: %3 (Text) Data: %4",
+  "message0": "%1 save a file %2 called %3 (Text) with data %4",
   "args0": [
     {
       "type": "field_image",
@@ -97,7 +97,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "ask",
-  "message0": "Ask %1 For Text",
+  "message0": "ask for text %1",
   "args0": [
     {
       "type": "input_value",
@@ -111,7 +111,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "scratch_join",
-  "message0": "Join %1 With %2",
+  "message0": "join %1 with %2",
   "args0": [
     {
       "type": "input_value",
@@ -132,12 +132,12 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": null,
   "colour": 120,
-  "tooltip": "(Block From Scratch) Joins Text The First Value And 2nd",
+  "tooltip": "(Block From Scratch) Combines two strings.",
   "helpUrl": ""
 },
   {
   "type": "data_storage",
-  "message0": "%1 Store Data: %2 ID: %3 Value: %4",
+  "message0": "%1 store data %2 with ID %3 and value %4",
   "args0": [
     {
       "type": "field_image",
@@ -167,7 +167,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "data_storage_read",
-  "message0": "%1 Read From Storage: %2 ID: %3",
+  "message0": "%1 read storage %2 with id %3",
   "args0": [
     {
       "type": "field_image",
@@ -192,7 +192,7 @@ Blockly.defineBlocksWithJsonArray([
 },
  {
   "type": "data_storage_remove",
-  "message0": "%1 Remove Data From Storage: %2 ID: %3",
+  "message0": "%1 remove data from storage %2 with ID %3",
   "args0": [
     {
       "type": "field_image",
@@ -218,7 +218,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "wait",
-  "message0": "Wait for %1 When Finished Waiting %2 %3",
+  "message0": "wait for %1 milliseconds %2 do %3",
   "args0": [
     {
       "type": "input_value",
@@ -237,13 +237,13 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 65,
-  "tooltip": "This Waits For This Many Something... (idk what wait method it uses, maybe frames???))",
+  "tooltip": "Wait for a specific amount of milliseconds",
   "helpUrl": "https://www.sitepoint.com/delay-sleep-pause-wait/"
 },
 {
   "type": "comment",
   "lastDummyAlign0": "RIGHT",
-  "message0": "Comment: %1",
+  "message0": "comment: %1",
   "args0": [
     {
       "type": "field_input",
@@ -259,7 +259,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "confirm",
-  "message0": "Ask To %1",
+  "message0": "confirm %1",
   "args0": [
     {
       "type": "input_value",
@@ -268,12 +268,12 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": null,
   "colour": 210,
-  "tooltip": "This Will Give Out If The Player Is Wanting To Do This If Not It Will Be False",
+  "tooltip": "Asks for yes or no.",
   "helpUrl": ""
 },
 {
   "type": "while",
-  "message0": "While %1 %2",
+  "message0": "repeat while %1 %2",
   "args0": [
     {
       "type": "input_value",
@@ -293,7 +293,7 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 70,
-  "tooltip": "Repeats Until Its False Or = 0.",
+  "tooltip": "Repeats until the condition is false.",
   "helpUrl": ""
 },
     {
@@ -306,7 +306,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "or",
-  "message0": "%1 Or %2 %3",
+  "message0": "%1 or %2 %3",
   "args0": [
     {
       "type": "input_value",
@@ -325,7 +325,7 @@ Blockly.defineBlocksWithJsonArray([
   "inputsInline": true,
   "output": "Boolean",
   "colour": 120,
-  "tooltip": "If One Of These Statements Is True",
+  "tooltip": "Either of the statements are true.",
   "helpUrl": ""
 },
     {
@@ -353,7 +353,7 @@ Blockly.defineBlocksWithJsonArray([
     {
   "type": "play_pause_sound_component",
   "lastDummyAlign0": "CENTRE",
-  "message0": "%1 %2",
+  "message0": "%1 sound %2",
   "args0": [
     {
       "type": "field_dropdown",
@@ -385,7 +385,7 @@ Blockly.defineBlocksWithJsonArray([
     {
   "type": "is_doing_this_sound_component",
   "lastDummyAlign0": "CENTRE",
-  "message0": "Is %1 %2",
+  "message0": "is sound %1 %2",
   "args0": [
     {
       "type": "field_variable",
@@ -417,7 +417,7 @@ Blockly.defineBlocksWithJsonArray([
     {
   "type": "is_doing_this_sound_component",
   "lastDummyAlign0": "CENTRE",
-  "message0": "Is %1 %2",
+  "message0": "is sound %1 %2",
   "args0": [
     {
       "type": "field_variable",
@@ -456,7 +456,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "set_setting_sound_component",
-  "message0": "Set %1 %2 Setting To  %3",
+  "message0": "set %1 %2 setting to %3",
   "args0": [
     {
       "type": "field_variable",
@@ -496,7 +496,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "log",
-  "message0": "Log In Console %1",
+  "message0": "console log %1",
   "args0": [
     {
       "type": "input_value",
@@ -516,7 +516,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "playnotegmidi",
-  "message0": "Play Note %1 with instrument %2",
+  "message0": "play note %1 with instrument %2",
   "args0": [
     {
       "type": "input_value",
@@ -566,7 +566,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "async",
-  "message0": "async this %1 %2",
+  "message0": "async %1 %2",
   "args0": [
     {
       "type": "input_dummy"
@@ -579,7 +579,7 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 330,
-  "tooltip": "its while but it animates the program",
+  "tooltip": "Warps speed",
   "helpUrl": ""
 },
     {
@@ -619,7 +619,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "lists_make_item",
-  "message0": "List Item %1 %2",
+  "message0": "list item %1 %2",
   "args0": [
     {
       "type": "input_dummy"
@@ -644,7 +644,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "list_text",
-  "message0": "Make List Off Of Text %1",
+  "message0": "make list out of text %1",
   "args0": [
     {
       "type": "field_input",
@@ -660,7 +660,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "did_press_key_",
-  "message0": "Key %1 Pressed?",
+  "message0": "key %1 pressed?",
   "args0": [
     {
       "type": "field_dropdown",
@@ -837,7 +837,7 @@ Blockly.defineBlocksWithJsonArray([
 },
 {
   "type": "calculate_note_as_play_rate",
-  "message0": "calculate  %1 as a playback rate",
+  "message0": "calculate note %1 as a playback rate",
   "args0": [
     {
       "type": "input_value",
