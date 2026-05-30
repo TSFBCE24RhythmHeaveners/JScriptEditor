@@ -106,7 +106,7 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": null,
   "colour": 165,
-  "tooltip": "Asks For Text",
+  "tooltip": "Asks for text.",
   "helpUrl": ""
 },
     {
@@ -132,7 +132,7 @@ Blockly.defineBlocksWithJsonArray([
   ],
   "output": null,
   "colour": 120,
-  "tooltip": "(Block From Scratch) Combines two strings.",
+  "tooltip": "Combines two strings.",
   "helpUrl": ""
 },
   {
@@ -167,7 +167,7 @@ Blockly.defineBlocksWithJsonArray([
 },
     {
   "type": "data_storage_read",
-  "message0": "%1 read storage %2 with id %3",
+  "message0": "%1 read storage %2 with ID %3",
   "args0": [
     {
       "type": "field_image",
