@@ -1,0 +1,32 @@
+Blockly.defineBlocksWithJsonArray([
+{
+  "type": "console_warn",
+  "tooltip": "Prints a warning in console.",
+  "helpUrl": "",
+  "message0": "console warn %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "consolewarning"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 225 120
+},
+{
+  "type": "console_error",
+  "tooltip": "Prints an error in console.",
+  "helpUrl": "",
+  "message0": "console error %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "consoleerror"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 120
+}
+]);
