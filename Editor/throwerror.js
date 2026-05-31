@@ -16,7 +16,7 @@ Blockly.defineBlocksWithJsonArray([
   "inputsInline": false
 },{
   "type": "throw_error_end",
-  "message0": "throw error %1 then end",
+  "message0": "end by throwing error %1",
   "args0": [
     {
       "type": "input_value",
@@ -27,7 +27,7 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 120,
   "tooltip": "Throws an error.",
   "helpUrl": "",
-  "inputsInline": true
+  "inputsInline": false
 }
 ]);
 Blockly.JavaScript['throw_error'] = function(block) {
