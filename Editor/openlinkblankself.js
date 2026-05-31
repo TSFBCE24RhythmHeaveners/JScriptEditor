@@ -5,8 +5,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "OpenLinkURLNew",
-      "check": "String"
+      "name": "OpenLinkURLNew"
     }
   ],
   "previousStatement": null,
@@ -20,8 +19,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "OpenLinkURLSelf",
-      "check": "String"
+      "name": "OpenLinkURLSelf"
     }
   ],
   "previousStatement": null,
@@ -29,7 +27,8 @@ Blockly.defineBlocksWithJsonArray([
   "colour": 345,
   "tooltip": "",
   "helpUrl": ""
-}])
+}
+]);
 Blockly.JavaScript['openlinkself'] = function(block) {
   var value_openlinkurlself = Blockly.JavaScript.valueToCode(block, 'OpenLinkURLSelf', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
