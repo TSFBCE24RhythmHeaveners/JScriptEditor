@@ -1005,8 +1005,9 @@ Blockly.JavaScript['lists_get'] = function(block) {
 Blockly.JavaScript['lists_make'] = function(block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
   // TODO: Assemble JavaScript into code variable.
-  var code = '[' + statements_name + ' "NaN"]';
+  var code = '[' + statements_name + ']';
   // TODO: Change ORDER_NONE to the correct strength.
+  // "NaN" is deprecated.
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 Blockly.JavaScript['lists_make_item'] = function(block) {
