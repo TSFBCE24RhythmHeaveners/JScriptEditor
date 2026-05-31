@@ -67,7 +67,7 @@ Blockly.JavaScript['console_error'] = function(block) {
   return code;
 };
 Blockly.JavaScript['console_info'] = function(block) {
-  var value_info = Blockly.JavaScript.valueToCode(block, 'inform_text', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_info = Blockly.JavaScript.valueToCode(block, 'info_text', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'console.info(' + value_info + ');\n';
   return code;
 };
