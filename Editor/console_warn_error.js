@@ -29,7 +29,7 @@ Blockly.defineBlocksWithJsonArray([
   "nextStatement": null,
   "colour": 120
 }
-]);
+])
 Blockly.JavaScript['console_warn'] = function(block) {
   var value_warning = Blockly.JavaScript.valueToCode(block, 'warn_text', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'console.warn(' + value_warning + ');\n';
