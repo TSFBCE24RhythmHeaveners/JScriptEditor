@@ -501,7 +501,7 @@ Blockly.defineBlocksWithJsonArray([
   "previousStatement": null,
   "nextStatement": null,
   "colour": 120,
-  "tooltip": "",
+  "tooltip": "Prints a message in console.",
   "helpUrl": ""
 },
     {
