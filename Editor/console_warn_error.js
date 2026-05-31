@@ -7,7 +7,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "consolewarn"
+      "name": "warn_text"
     }
   ],
   "previousStatement": null,
@@ -22,7 +22,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "consoleerror"
+      "name": "error_text"
     }
   ],
   "previousStatement": null,
@@ -31,12 +31,12 @@ Blockly.defineBlocksWithJsonArray([
 }
 ]);
 Blockly.JavaScript['console_warn'] = function(block) {
-  var value_warning = Blockly.JavaScript.valueToCode(block, 'consolewarn', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_warning = Blockly.JavaScript.valueToCode(block, 'warn_text', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'console.warn(' + value_warning + ');\n';
   return code;
 };
 Blockly.JavaScript['console_error'] = function(block) {
-  var value_error = Blockly.JavaScript.valueToCode(block, 'consoleerror', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_error = Blockly.JavaScript.valueToCode(block, 'error_text', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'console.error(' + value_error + ');\n';
   return code;
 };
