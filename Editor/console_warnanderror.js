@@ -7,7 +7,7 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "consolewarning"
+      "name": "consolewarn"
     }
   ],
   "previousStatement": null,
@@ -31,7 +31,7 @@ Blockly.defineBlocksWithJsonArray([
 }
 ]);
 Blockly.JavaScript['console_warn'] = function(block) 
-  var value_warning = Blockly.JavaScript.valueToCode(block, 'consolewarning', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_warning = Blockly.JavaScript.valueToCode(block, 'consolewarn', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'console.warn(' + value_warning + ');\n';
   return code;
 }
