@@ -667,23 +667,23 @@ Blockly.defineBlocksWithJsonArray([
       "name": "key",
       "options": [
         [
-          "Space Bar",
+          "spacebar",
           " "
         ],
         [
-          "Right Arrow",
+          "right arrow",
           "right"
         ],
         [
-          "Left Arrow",
+          "left Arrow",
           "left"
         ],
         [
-          "Down Arrow",
+          "down Arrow",
           "down"
         ],
         [
-          "Up Arrow",
+          "up Arrow",
           "up"
         ],
         [
