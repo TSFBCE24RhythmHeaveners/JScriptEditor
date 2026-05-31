@@ -36,7 +36,7 @@ Blockly.JavaScript['console_warn'] = function(block)
   return code;
 }
 Blockly.JavaScript['console_error'] = function(block) 
-  var value_warningerror = Blockly.JavaScript.valueToCode(block, 'consoleerror', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_error = Blockly.JavaScript.valueToCode(block, 'consoleerror', Blockly.JavaScript.ORDER_ATOMIC);
   var code = 'console.error(' + value_error + ');\n';
   return code;
 }
