@@ -6,7 +6,8 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "OpenLinkURL"
+      "name": "OpenLinkURL",
+      "check": null
     }
   ],
   "previousStatement": null,
@@ -21,7 +22,8 @@ Blockly.defineBlocksWithJsonArray([
    "args0": [
      {
        "type": "input_value",
-       "name": "SpeakText"
+       "name": "SpeakText",
+       "check": null
      }
    ],
    "previousStatement": null,
@@ -47,11 +49,13 @@ Blockly.defineBlocksWithJsonArray([
     },
     {
       "type": "input_value",
-      "name": "FILENAME"
+      "name": "FILENAME",
+      "check": null
     },
     {
       "type": "input_value",
-      "name": "FILEDATA"
+      "name": "FILEDATA",
+      "check": null
     }
   ],
   "previousStatement": null,
@@ -66,7 +70,8 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "sound"
+      "name": "sound",
+      "check": null
     }
   ],
   "previousStatement": null,
@@ -80,7 +85,8 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "sound"
+      "name": "sound",
+      "check": null
     }
   ],
   "previousStatement": null,
@@ -109,11 +115,13 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "TEXT1"
+      "name": "TEXT1",
+      "check": null
     },
     {
       "type": "input_value",
-      "name": "TEXT2"
+      "name": "TEXT2",
+      "check": null
     }
   ],
   "output": null,
@@ -311,7 +319,7 @@ Blockly.defineBlocksWithJsonArray([
   "inputsInline": true,
   "output": "Boolean",
   "colour": 120,
-  "tooltip": "Either of the two statements are true.",
+  "tooltip": "Either of the statements are true.",
   "helpUrl": ""
 },
     {
@@ -469,7 +477,8 @@ Blockly.defineBlocksWithJsonArray([
     },
     {
       "type": "input_value",
-      "name": "NAME"
+      "name": "NAME",
+      "check": null
     }
   ],
   "inputsInline": true,
@@ -485,8 +494,8 @@ Blockly.defineBlocksWithJsonArray([
   "args0": [
     {
       "type": "input_value",
-      "name": "logtext"
-      ]
+      "name": "logtext",
+      "check": null
     }
   ],
   "previousStatement": null,
@@ -607,7 +616,8 @@ Blockly.defineBlocksWithJsonArray([
     },
     {
       "type": "input_value",
-      "name": "text"
+      "name": "text",
+      "check": null
     }
   ],
   "inputsInline": true,
