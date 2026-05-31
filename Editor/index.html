@@ -381,6 +381,7 @@
 		<block type="log"><value name="logtext"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 		<block type="console_warn"><value name="warn_text"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 		<block type="console_error"><value name="error_text"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
+	    <block type="console_info"><value name="info_text"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 		<block type="throw_error"><value name="error"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
 		<block type="throw_error_end"><value name="error"><shadow type="text"><field name="TEXT">abc</field></shadow></value></block>
         <block type="text_prompt_ext">
@@ -541,6 +542,8 @@
 		<block type="log"></block>
 		<block type="console_warn"></block>
 		<block type="console_error"></block>
+		<block type="console_info"></block>
+		<block type="clear_console"></block>
 		<block type="throw_error"></block>
 		<block type="throw_error_end"></block>
 	</category>
@@ -753,7 +756,7 @@ Blockly.Xml.domToWorkspace(xml, workspace);
         
 	    
     </script>
-   <script src="console_warn_error.js"></script>
+   <script src="moreconsoleblocks.js"></script>
    <script src="gsmWindowFunction.js"></script>
    <script src="gvbvdxx_blocks.js"></script>
    <script src="URLsettings.js"></script>
