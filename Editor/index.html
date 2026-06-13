@@ -5,7 +5,6 @@
 <script src="blockly_compressed.js"></script>
 <script src="blocks_compressed.js"></script>
 <script src="javascript_compressed.js"></script>
-<script src="php_compressed.js"></script>
 <script src="msg/js/en.js"></script>
 <script src="html/scripts/FileSaver.js"></script>
 <script src="html/scripts/SpeakSynthesis.js"></script>
@@ -35,10 +34,6 @@
     <button onclick="loadblock()" style="height: 30px; width: 80px; border:0;">Load</button>
     <button onclick="saveblockcode()" style="height: 30px; width: 80px; border:0;">Save code</button>
     <button onclick="loadblockcode()" style="height: 30px; width: 80px; border:0;">Load code</button>
-	<select id="generateDropdown" onchange="regenerate()">
-      <option value="JavaScript">JavaScript</option>
-      <option value="PHP">PHP</option>
-    </select>
         </div>
         <div class="bottom">
             <textarea type="text" style="height: 60px; width: 500px; border:0; resize: none;" id="p2" enabled="false" cols="infinity" rows="infinity" readonly>Output Of Your Code </textarea>
